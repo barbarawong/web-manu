@@ -1,0 +1,6 @@
+{
+  "count": 205,
+  "ext": "webp",
+  "dir": "data/_photos/",
+  "_note": "El JS genera data/_photos/${i}.webp para i = 1..count. Si añades fotos, sube count."
+}

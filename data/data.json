@@ -1,0 +1,32 @@
+{
+  "site": {
+    "name": "Bárbara Sánchez Barroso",
+    "handle": "barbara_wong",
+    "default_lang": "es",
+    "languages": ["es", "en", "ca"]
+  },
+  "sources": {
+    "menu":         "data/menu.json",
+    "about":        "data/about.json",
+    "news":         "data/news.json",
+    "projects":     "data/projects.json",
+    "publications": "data/publications.json",
+    "photos":       "data/photos.json"
+  },
+  "welcome": {
+    "dir": "data/_welcome/",
+    "videos": [
+      { "id": "1", "label": "01" },
+      { "id": "2", "label": "02" },
+      { "id": "3", "label": "03" },
+      { "id": "4", "label": "04" }
+    ],
+    "formats": ["webm", "mp4"]
+  },
+  "assets": {
+    "news_dir":         "data/_news/",
+    "publications_dir": "data/_publications/",
+    "works_dir":        "data/_works/",
+    "photos_dir":       "data/_photos/"
+  }
+}
