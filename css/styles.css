@@ -343,6 +343,16 @@ body[data-view="contact"] #viewer-content {
 .view-contact a,
 .view-contact a:hover { text-decoration: none; color: inherit; }
 
+.view-about-image,
+.view-contact-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 1.5rem auto 0;
+}
+.view-contact-image { margin: 0 auto 1.5rem; }
+
 .view-news {
     display: flex;
     flex-direction: column;

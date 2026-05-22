@@ -1,7 +1,6 @@
 [
   {
     "slug": "els-peregrins",
-    "order": 1,
     "title": "Els peregrins",
     "published": true,
     "ficha_tecnica": {
@@ -59,7 +58,6 @@
   },
   {
     "slug": "desig-i-ficcio",
-    "order": 2,
     "title": "Desig i Ficció",
     "published": true,
     "ficha_tecnica": {
@@ -130,7 +128,6 @@
   },
   {
     "slug": "biophilia",
-    "order": 3,
     "title": "Biophilia",
     "published": true,
     "ficha_tecnica": {
@@ -198,7 +195,6 @@
   },
   {
     "slug": "aiguarir",
-    "order": 4,
     "title": "Aiguarir. Després de Surar",
     "published": true,
     "ficha_tecnica": {
@@ -277,7 +273,6 @@
   },
   {
     "slug": "una-comunitat-de-llavors-i-de-relats",
-    "order": 5,
     "title": "Una comunitat de llavors i de relats",
     "published": true,
     "ficha_tecnica": {
@@ -366,7 +361,6 @@
   },
   {
     "slug": "the-holobiont-that-therefore-i-am",
-    "order": 6,
     "title": "The holobiont that therefore I am",
     "published": true,
     "ficha_tecnica": {
@@ -427,7 +421,6 @@
   },
   {
     "slug": "botanical-dream",
-    "order": 7,
     "title": "Botanical Dream",
     "published": true,
     "ficha_tecnica": {
@@ -494,7 +487,6 @@
   },
   {
     "slug": "the-way",
-    "order": 8,
     "title": "The Way My Mother Talked to Plants",
     "published": true,
     "ficha_tecnica": {
@@ -537,9 +529,8 @@
       ]
     ]
   },
-   {
+  {
     "slug": "the-knots-we-knot",
-    "order": 9,
     "title": "The Knots We Knot",
     "published": true,
     "ficha_tecnica": {
