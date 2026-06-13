@@ -537,8 +537,8 @@
       "year": "2021",
       "type": {
         "es": "16 mm transferido a digital y 2 performances, en colaboración con Adriana Vila Guevara y Maria Marvila ",
-        "en": "16 mm transferred to digital and 2 performances",
-        "ca": "16 mm transferit a digital i 2 performances"
+        "en": "16 mm transferred to digital and 2 performances, in collaboration with Adriana Vila Guevara and Maria Marvila",
+        "ca": "16 mm transferit a digital i 2 performances, en col·laboració amb Adriana Vila Guevara i Maria Marvila"
       },
       "duration": "8 min 7 sec"
     },
@@ -559,6 +559,79 @@
       "es": [],
       "en": [],
       "ca": []
+    },
+    "gallerys": [
+      [
+        "exhibition views",
+        [
+          "exhibition-views/1.webp",
+          "exhibition-views/2.webp",
+          "exhibition-views/3.webp",
+          "exhibition-views/4.webp"
+        ]
+      ],
+      [
+        "performance Los nudos que anudamos, en colaboración con Adriana Vila Guevara",
+        [
+          "performance1/1.webp",
+          "performance1/2.webp",
+          "performance1/3.webp",
+          "performance1/4.webp",
+          "performance1/5.webp"
+        ]
+      ],
+      [
+        "performance Una (espècie de) meditació crítica a la vinya, en colaboración con Maria Marvila",
+        [
+          "performance2/1.webp",
+          "performance2/2.webp",
+          "performance2/3.webp",
+          "performance2/4.webp",
+          "performance2/5.webp",
+          "performance2/6.webp",
+          "performance2/7.webp",
+          "performance2/8.webp"
+        ]
+      ]
+    ]
+  },
+  {
+    "slug": "coexistence",
+    "title": "Coexistence",
+    "published": true,
+    "ficha_tecnica": {
+      "year": "2021",
+      "type": {
+        "es": "Video digital",
+        "en": "Digital video",
+        "ca": "Vídeo digital"
+      },
+      "duration": "8 min"
+    },
+    "info": {
+      "es": [
+        "Coexistence es una película concisa que explora nuestra relación con los animales y el mundo vivo en tiempos de pandemia. Hasta ahora nos hemos aprovechado del planeta, considerándolo una mercancía y nuestra propiedad, como hacen los niños de la película con los peces, utilizándolos como atrezzo en un juego. En este juego hay transacciones económicas, como si los animales fueran máquinas con las que jugar. La película pretende plantear la siguiente pregunta: ¿la pandemia nos hará cambiar y cambiar nuestra relación con el mundo?"
+      ],
+      "en": [
+        "Coexistence is a concise film that explores our relationship with animals and the living world in times of pandemic. Until now we have taken advantage of the planet, considering it a commodity and our property, as the children in the film do with the fish, using them as props in a game. In this game there are economic transactions, as if animals were machines to play with. The film aims to raise the following question: will the pandemic make us change and change our relationship with the world?"
+      ],
+      "ca": [
+        ""
+      ]
+    },
+    "links": [],
+    "trailer": "https://vimeo.com/541253773",
+    "creditos": {
+      "es": ["Fragmento del texto “What the virus wants”, de Filipa Ramos",
+       "Voz en off: Bo Alfaro"],
+      "en": [
+        "Excerpt from the text “What the virus wants”, by Filipa Ramos",
+         "Voice over: Bo Alfaro"
+      ],
+      "ca": [
+        "Extracte del text «What the Virus Wants», de Filipa Ramos",
+        "Veu en off: Bo Alfaro"
+      ]
     },
     "gallerys": [
       [
