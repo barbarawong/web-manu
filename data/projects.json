@@ -163,6 +163,15 @@
     "trailer": "https://vimeo.com/878483404",
     "creditos": {
       "es": [
+        "Escrito por: Bárbara Sánchez Barroso, Paulius Sliaupa",
+        "Diseño de sonido: Paulius Sliaupa",
+        "Voz en off: Bryony Ulyett",
+        "Color: Ben Guez",
+        "Laboratorio Super 8: CineLab Bucharest",
+        "Piezas cerámicas producidas y cocidas en el taller de Julieta Dentone",
+        "Agradecimientos: a Erundina, Rocio, Luis y el resto de la familia de Alba Feito por acogerme, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara y Armando de Figal de Xugabolos, Cornelia, Diana y Rodrigo de CineLab Bucharest, David Rodríguez y el equipo de La Panera."
+      ],
+      "en": [
         "Written by: Bárbara Sánchez Barroso, Paulius Sliaupa",
         "Sound Design: Paulius Sliaupa",
         "Voice over: Bryony Ulyett",
@@ -171,8 +180,13 @@
         "Ceramic pieces produced and fired in Julieta Dentone's workshop",
         "Acknowledgments: to Erundina, Rocio, Luis, and the rest of Alba Feito's family for hosting me, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara and Armando from Figal de Xugabolos, Cornelia, Diana and Rodrigo from CineLab Bucharest, David Rodríguez, and the La Panera team."
       ],
-      "en": [],
-      "ca": []
+      "ca": ["Escrit per: Bárbara Sánchez Barroso, Paulius Sliaupa",
+      "Disseny de so: Paulius Sliaupa",
+      "Veu en off: Bryony Ulyett",
+      "Color: Ben Guez",
+      "Laboratori Super 8: CineLab Bucharest",
+      "Peces ceràmiques produïdes i cuites al taller de Julieta Dentone",
+      "Agraïments: a Erundina, Rocio, Luis i la resta de la família d'Alba Feito per acollir-me, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara i Armando de Figal de Xugabolos, Cornelia, Diana i Rodrigo de CineLab Bucharest, David Rodríguez i l'equip de La Panera."]
     },
     "gallerys": [
       [
@@ -622,11 +636,13 @@
     "links": [],
     "trailer": "https://vimeo.com/541253773",
     "creditos": {
-      "es": ["Fragmento del texto “What the virus wants”, de Filipa Ramos",
-       "Voz en off: Bo Alfaro"],
+      "es": [
+        "Fragmento del texto “What the virus wants”, de Filipa Ramos",
+        "Voz en off: Bo Alfaro"
+      ],
       "en": [
         "Excerpt from the text “What the virus wants”, by Filipa Ramos",
-         "Voice over: Bo Alfaro"
+        "Voice over: Bo Alfaro"
       ],
       "ca": [
         "Extracte del text «What the Virus Wants», de Filipa Ramos",
