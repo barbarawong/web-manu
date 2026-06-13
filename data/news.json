@@ -1,4 +1,20 @@
-[
+[ {
+    "year": "2026",
+    "title": {
+      "es": "Cineclub en La Escocesa",
+      "en": "Cineclub at La Escocesa",
+      "ca": "Cineclub a La Escocesa"
+    },
+    "description": {
+      "es": "El cineclub es un encuentro en el que mensualmente mostramos una cuidada selección de películas. Cada sesión incluye la proyección y un pica-pica vegetariano preparado por une artista invitade, inspirado en la obra proyectada.",
+      "en": "The cineclub is a gathering where each month we present a carefully curated selection of films. Each session includes a screening and vegetarian snacks prepared by a guest artist, inspired by the work being shown.",
+      "ca": "El cineclub és una trobada on mensualment mostrem una cuidada selecció de pel·lícules. Cada sessió inclou la projecció i un pica-pica vegetarià preparat per uni artista invitadi, inspirada en l'obra projectada."
+    },
+    "image": "data/_news/075.webp",
+    "links": [
+      "https://laescocesa.org/es/view/cineclub/4007"
+    ]
+  },
   {
     "year": "2026",
     "title": {
@@ -13,7 +29,6 @@
     },
     "image": "data/_news/074.webp",
     "links": [
-      "https://teatenerife.es/activitat/el-espesor/3283?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnhpR5HoK8Nias8N8rr6YIJH7iK3e2DYvGSupxh-VLMPoFFUAQ_htUvccuPvk_aem_D67k-cY8hnWtZmRkYxXtFg",
       "https://dafilmfestival.com/movie/els-peregrins/"
     ]
   },
