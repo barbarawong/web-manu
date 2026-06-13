@@ -287,7 +287,7 @@
   },
   {
     "slug": "una-comunitat-de-llavors-i-de-relats",
-    "title": "Una comunitat de llavors i de relats",
+    "title": "Una comunitat de <br> llavors i de relats",
     "published": true,
     "ficha_tecnica": {
       "year": "2023",
@@ -501,7 +501,7 @@
   },
   {
     "slug": "the-way",
-    "title": "The Way My Mother Talked to Plants",
+    "title": "The Way My Mother <br> Talked to Plants",
     "published": true,
     "ficha_tecnica": {
       "year": "2022",
