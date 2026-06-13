@@ -635,35 +635,11 @@
     },
     "gallerys": [
       [
-        "exhibition views",
+        "fotogramas",
         [
-          "exhibition-views/1.webp",
-          "exhibition-views/2.webp",
-          "exhibition-views/3.webp",
-          "exhibition-views/4.webp"
-        ]
-      ],
-      [
-        "performance Los nudos que anudamos, en colaboración con Adriana Vila Guevara",
-        [
-          "performance1/1.webp",
-          "performance1/2.webp",
-          "performance1/3.webp",
-          "performance1/4.webp",
-          "performance1/5.webp"
-        ]
-      ],
-      [
-        "performance Una (espècie de) meditació crítica a la vinya, en colaboración con Maria Marvila",
-        [
-          "performance2/1.webp",
-          "performance2/2.webp",
-          "performance2/3.webp",
-          "performance2/4.webp",
-          "performance2/5.webp",
-          "performance2/6.webp",
-          "performance2/7.webp",
-          "performance2/8.webp"
+          "img/1.webp",
+          "img/2.webp",
+          "img/3.webp"
         ]
       ]
     ]
