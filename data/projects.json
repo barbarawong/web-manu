@@ -659,5 +659,42 @@
         ]
       ]
     ]
+  },
+  {
+    "slug": "the-word-for-world-is-forest",
+    "title": "The word for world is forest",
+    "published": true,
+    "ficha_tecnica": {
+      "year": "2019",
+      "type": {
+        "es": "Vídeo / videoinstalación",
+        "en": "Video / video installation",
+        "ca": "Vídeo / videoinstal·lació"
+      },
+      "duration": "12 min"
+    },
+    "info": {
+      "es": [
+        "“We don't need to understand everything.”",
+        "Donna Haraway",
+        "El título sugerente de la exposición hace referencia a la homónima novela de ciencia-ficción de Ursula K. Le Guin, publicada en 1972, en la que la escritora estadounidense condensa e interrelaciona temas de colonización, deforestación, esclavitud, sueño y violencia. En la novela, la metáfora del bosque interpela a la conciencia ecológica y nos lleva a reflexionar sobre la acción crítica de los seres humanos hacia la naturaleza.",
+        "Bárbara Sánchez Barroso transita alrededor de estas especulaciones, situando su propuesta creativa en el ámbito de la experimentación, del work in progress, de la investigación. Estamos en un espacio en donde la artista está dialogando con su propia práctica, donde el pensamiento fluye sin estar marcado y encerrado en líneas rígidas, donde las preguntas son más importantes que las respuestas."
+      ],
+      "en": [],
+      "ca": []
+    },
+    "links": [
+      [
+        "excerpt",
+        "https://vimeo.com/372530443?share=copy&fl=sv&fe=ci"
+      ]
+    ],
+    "trailer": "https://vimeo.com/372530443?share=copy&fl=sv&fe=ci",
+    "creditos": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
+    "gallerys": []
   }
 ]
