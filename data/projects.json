@@ -23,6 +23,11 @@
         "Al Prat de Llobregat, Ondrej treballa com a falconer en el control d'aus a l'aeroport, alhora que cuida les seves pròpies terres amb animals en un entorn agrícola cada vegada més pressionat. En aquest territori limítrof, la seva feina esdevé una forma de resistència davant del brunzit constant dels avions. Humans i no humans comparteixen, en un espai marcat per l'ampliació de l'aeroport, una fràgil xarxa de relacions."
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [
       [
         "D'A Film Festival — Els peregrins",
@@ -92,6 +97,11 @@
         "Des de la cultura dels materials i la seva imparable transformació, sorgeix una col·lecció d'objectes que és només un bri del passat, el present i el futur del margalló."
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [
       [
         "Catálogo (PDF)",
@@ -159,6 +169,11 @@
         "Text curatorial de Christian Alonso"
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [],
     "trailer": "https://vimeo.com/878483404",
     "creditos": {
@@ -180,13 +195,15 @@
         "Ceramic pieces produced and fired in Julieta Dentone's workshop",
         "Acknowledgments: to Erundina, Rocio, Luis, and the rest of Alba Feito's family for hosting me, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara and Armando from Figal de Xugabolos, Cornelia, Diana and Rodrigo from CineLab Bucharest, David Rodríguez, and the La Panera team."
       ],
-      "ca": ["Escrit per: Bárbara Sánchez Barroso, Paulius Sliaupa",
-      "Disseny de so: Paulius Sliaupa",
-      "Veu en off: Bryony Ulyett",
-      "Color: Ben Guez",
-      "Laboratori Super 8: CineLab Bucharest",
-      "Peces ceràmiques produïdes i cuites al taller de Julieta Dentone",
-      "Agraïments: a Erundina, Rocio, Luis i la resta de la família d'Alba Feito per acollir-me, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara i Armando de Figal de Xugabolos, Cornelia, Diana i Rodrigo de CineLab Bucharest, David Rodríguez i l'equip de La Panera."]
+      "ca": [
+        "Escrit per: Bárbara Sánchez Barroso, Paulius Sliaupa",
+        "Disseny de so: Paulius Sliaupa",
+        "Veu en off: Bryony Ulyett",
+        "Color: Ben Guez",
+        "Laboratori Super 8: CineLab Bucharest",
+        "Peces ceràmiques produïdes i cuites al taller de Julieta Dentone",
+        "Agraïments: a Erundina, Rocio, Luis i la resta de la família d'Alba Feito per acollir-me, Paulius Sliaupa, Ben Guez, Valentina Alvarado, Alba Bresolí, Cristina Ferrández, Mara i Armando de Figal de Xugabolos, Cornelia, Diana i Rodrigo de CineLab Bucharest, David Rodríguez i l'equip de La Panera."
+      ]
     },
     "gallerys": [
       [
@@ -239,6 +256,11 @@
         "En un acte d'homenatge a Perejaume i a la seva obra Surar, Bárbara i Maria van portar la branca caiguda d'una alzina surera, de la muntanya encara cremada però reverdint, cap al mar del Maresme. Allà, en un acte col·lectiu, van convidar les persones participants a penjar de les branques cremades paraules escrites en papers biodegradables, per a la curació de la muntanya i per a la consciència de la comunitat. Finalment, van fer surar al mar la branca negra amb les paraules de paper lligades, per aiguarir-la*.",
         "*Aiguarir (en català: aigua + guarir)"
       ]
+    },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
     },
     "links": [],
     "trailer": "https://vimeo.com/852875084",
@@ -327,6 +349,11 @@
         "Amb les alumnes hem llegit textos com La teoria de la bossa de la ficció d'Ursula K. Le Guin, dalt d'una muntanya, que vam trigar una hora a pujar, i després meditem, mengem avellanes i prenem el sol. I no recordo que ningú pensés en el mòbil ni es queixés per no tenir-lo. Amb nosaltres només hi havia una comunitat formada de natura, ficció, fils, cistells i llavors."
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [
       [
         "Hoja de sala — On es recolzen les imatges? (PDF)",
@@ -339,9 +366,15 @@
     ],
     "trailer": "https://vimeo.com/824791180",
     "creditos": {
-      "es": ["Proyecto desarrollado en el marco de Bòlit Mentor — Bolit, Centre d'Art Contemporani de Girona. Comisaria: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."],
-      "en": ["Project developed within the framework of Bòlit Mentor — Bolit, Centre d'Art Contemporani de Girona. Curator: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."],
-      "ca": ["Projecte desenvolupat en el marc de Bòlit Mentor — Bòlit, Centre d'Art Contemporani de Girona. Comissària: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."]
+      "es": [
+        "Proyecto desarrollado en el marco de Bòlit Mentor — Bolit, Centre d'Art Contemporani de Girona. Comisaria: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."
+      ],
+      "en": [
+        "Project developed within the framework of Bòlit Mentor — Bolit, Centre d'Art Contemporani de Girona. Curator: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."
+      ],
+      "ca": [
+        "Projecte desenvolupat en el marc de Bòlit Mentor — Bòlit, Centre d'Art Contemporani de Girona. Comissària: Marta Dahó. Institut Castell d'Estela d'Amer, Girona."
+      ]
     },
     "gallerys": [
       [
@@ -403,6 +436,11 @@
         "*The Knots We Knot* és una pel·lícula sorgida d'una col·laboració amb la cineasta Adriana Vila Guevara en una mini residència a la Vall de Santa Creu. Les dues artistes decideixen passar uns dies a la vall explorant els seus interessos i l'entorn humà, animal, vegetal i de líquens que les envolta, interactuant-hi a través d'una càmera Bolex de 16 mm i una gravadora de so, i acompanyades de les lectures de Donna Haraway, Robin W. Kimmerer i María Puig de la Bellacasa, entre d'altres autores."
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [],
     "trailer": "",
     "creditos": {
@@ -459,6 +497,11 @@
         "Obra en 16 mm que, a través de la ficció especulativa, dóna veu a les plantes del Jardí Botànic de Copenhaguen, creat el 1872. Mentre que l'ordre dels esdeveniments i el control antròpic impedeixen un rebobinat del temps i el retorn d'aquests cossos-planta a la seva naturalesa selvàtica, l'estratagema narrativa portada al cinema per l'artista reconfigura el que es pot dir, veure, fer. Imagina una fugida onírica cap a la ciutat, on els cossos vegetals dels habitants del jardí han abolit per fi la tanca que els contenia i ordenava, prenent possessió de l'espai que els havia estat robat. Esdevindran, en un temps molt llarg, profund i inimaginable, una nova forma de bosc queer, una aliança de totes aquelles entitats abans preses pels humans.",
         "Text curatorial de Lorenzo Lazzari"
       ]
+    },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
     },
     "links": [],
     "trailer": "",
@@ -520,6 +563,11 @@
         "A The way my mother talked to plants, l’artista ha filmat la seva mare a casa i amb amics (tant humans com no humans) per reflexionar sobre les cures entre espècies."
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [],
     "trailer": "",
     "creditos": {
@@ -563,6 +611,11 @@
       "ca": [
         "La peça fílmica en 16 mm és el resultat de la investigació duta a terme al llarg del període de residència a la Vall de Santa Creu. Com diuen les artistes, una translació d’un encontre que pensa amb cura. Que es llegeix entre línies, es mira als ulls, que escolta amb atenció el cruixir de l’entorn. Un esbós aplicat de l’esdevenir i generar amb. Un esbós, des del més mundà, d’un encontre físic, reflexiu, simbòlic i situat. Un passar pàgines com versions d’històries que es contenen en la seva senzillesa, en la seva durada i continuació. Un espai-temps per convertir-se en allò que és suggerit a cada pas. Una acceptació de la proposta de subjectivitat, actualitzant una vegada i una altra la manera en què és rebut allò que se’ns presenta, actualitzant cada gest i cada pols, en el teixit de figures de cordes. Reconeixent-nos seleccionades per la condició de caminants de senders entrellaçats."
       ]
+    },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
     },
     "links": [],
     "trailer": "https://vimeo.com/604236418",
@@ -630,6 +683,11 @@
         ""
       ]
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [],
     "trailer": "https://vimeo.com/541253773",
     "creditos": {
@@ -680,10 +738,13 @@
       "en": [],
       "ca": []
     },
+    "info_colapsable": {
+      "es": [],
+      "en": [],
+      "ca": []
+    },
     "links": [
-      [
-    
-      ]
+      []
     ],
     "trailer": "https://vimeo.com/372530443",
     "creditos": {
