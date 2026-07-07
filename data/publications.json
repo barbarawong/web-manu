@@ -17,6 +17,23 @@
     ]
   },
   {
+    "year": "2023",
+    "title": {
+      "es": "Gion gion!",
+      "en": "Gion gion!",
+      "ca": "Gion gion!"
+    },
+    "description": {
+      "es": "Fanzine\n\nProducida en la Quincena de arte, dentro del marco del proyecto «Vivim en un món devorat» en el Espai Nyamnyam.",
+      "en": "Fanzine\n\nProduced during the Quincena de arte, within the framework of the project «Vivim en un món devorat» at Espai Nyamnyam.",
+      "ca": "Fanzín\n\nProduïda a la Quinzena d'art, dins del marc del projecte «Vivim en un món devorat» a l'Espai Nyamnyam."
+    },
+    "image": "data/_publications/1_.webp",
+    "links": [
+      "https://fanzinoteca.net/fanzine/gion-gion/"
+    ]
+  },
+  {
     "year": "2021",
     "title": {
       "es": "Simpoiesis",
