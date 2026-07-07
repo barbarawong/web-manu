@@ -44,7 +44,7 @@
       [
         "",
         [
-          "poster.webp"
+          "posterVERTICAL.webp"
         ]
       ],
       [
@@ -452,9 +452,13 @@
       [
         "installation views — Bienal Sur (SAMoCA, Riyadh)",
         [
-          "Installation views at Bienal Sur- Imagine. Fantasies, Dreams, Utopias, SAMoCA, Riyadh/1701272605900.webp",
-          "Installation views at Bienal Sur- Imagine. Fantasies, Dreams, Utopias, SAMoCA, Riyadh/IMG_1379_peque.webp",
-          "Installation views at Bienal Sur- Imagine. Fantasies, Dreams, Utopias, SAMoCA, Riyadh/pasillo.webp"
+          "Installation views at Bienal Sur- Imagine. Fantasies, Dreams, Utopias, SAMoCA, Riyadh/1701272605900.webp"
+        ]
+      ], 
+      [
+        "installation views — Bienal Sur (SAMoCA, Riyadh)",
+        ["vertical/1.webp",
+          "vertical/2.webp"
         ]
       ],
       [
@@ -752,6 +756,25 @@
       "en": [],
       "ca": []
     },
-    "gallerys": []
+    "gallerys": [
+      [
+        "galeria 1",
+        [
+          "galeria 1/1.webp",
+          "galeria 1/2.webp",
+          "galeria 1/3.webp",
+          "galeria 1/4.webp",
+          "galeria 1/5.webp"
+        ]
+      ],
+      [
+        "galeria 2",
+        [
+          "galeria 2/1.webp",
+          "galeria 2/2.webp",
+          "galeria 2/3.webp"
+        ]
+      ]
+    ]
   }
 ]
