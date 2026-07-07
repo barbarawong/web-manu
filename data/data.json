@@ -1,7 +1,5 @@
 {
   "site": {
-    "name": "Bárbara Sánchez Barroso",
-    "handle": "barbara_wong",
     "default_lang": "es",
     "languages": ["es", "en", "ca"]
   },
@@ -22,11 +20,5 @@
       { "id": "4", "label": "04" }
     ],
     "formats": ["webm"]
-  },
-  "assets": {
-    "news_dir":         "data/_news/",
-    "publications_dir": "data/_publications/",
-    "works_dir":        "data/_works/",
-    "photos_dir":       "data/_photos/"
   }
 }

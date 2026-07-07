@@ -5,6 +5,9 @@ import { $, el } from "./dom.js";
 import { state } from "./data.js";
 
 const SESSION_KEY = "welcomeDone";
+// Debe coincidir con la transición de #welcome / #app en css/styles.css
+// (regla `#welcome { transition: opacity 0.4s ease; }`).
+const FADE_MS = 400;
 
 let entries = [];          // [{ id, label, sources: [{src, type}] }]
 let cur = null, nxt = null;
@@ -66,6 +69,18 @@ function swap() {
     queueNext();
 }
 
+// Remata un crossfade: tras FADE_MS, oculta la capa saliente y limpia su
+// clase de fade. Común a done() y showWelcomeAgain(); el resto de la
+// coreografía (qué capa arranca visible, si hay doble rAF, etc.) difiere
+// entre ambas y se queda en cada función.
+function finishCrossfade(saliente, extra) {
+    setTimeout(() => {
+        saliente.hidden = true;
+        saliente.classList.remove("is-fading-out");
+        if (extra) extra();
+    }, FADE_MS);
+}
+
 function attachEnded(video) {
     video.addEventListener("ended", () => {
         if (video !== cur) return;
@@ -104,17 +119,17 @@ function done() {
         document.removeEventListener("keydown", keydownHandler);
         keydownHandler = null;
     }
-    setTimeout(() => {
-        w.hidden = true;
+    finishCrossfade(w, () => {
         app.classList.remove("is-fading-out");
         app.hidden = false;
         $("#welcome-video-a").pause();
         $("#welcome-video-b").pause();
         document.dispatchEvent(new CustomEvent("welcome:done"));
-    }, 400);
+    });
 }
 
 export function shouldShowWelcome() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return false;
     return sessionStorage.getItem(SESSION_KEY) !== "1";
 }
 
@@ -176,6 +191,7 @@ export function skipWelcome() {
 }
 
 export function showWelcomeAgain() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (!entries.length) {
         // Welcome no inicializado (skip directo). Inicializa ahora.
         startWelcome();
@@ -198,10 +214,7 @@ export function showWelcomeAgain() {
         });
     });
 
-    setTimeout(() => {
-        app.hidden = true;
-        app.classList.remove("is-fading-out");
-    }, 400);
+    finishCrossfade(app);
 
     if (!keydownHandler) {
         keydownHandler = (e) => {

@@ -3,7 +3,7 @@
 import { $, el } from "./dom.js";
 import { state, t, tf, tfa, findProject } from "./data.js";
 import { openLightbox } from "./lightbox.js";
-import { md } from "./text.js";
+import { md, safeHref } from "./text.js";
 
 
 // Texto rico → párrafos. Criterio ÚNICO para info, créditos, news y publications.
@@ -21,15 +21,22 @@ function richParagraphs(val) {
 // ---------- Helpers ----------
 function zoomable(img, getGallery, getIndex) {
     img.classList.add("is-zoomable");
-    img.addEventListener("click", (e) => {
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", "ampliar imagen");
+    const open = (e) => {
         e.stopPropagation();
         openLightbox(getGallery(), getIndex());
+    };
+    img.addEventListener("click", open);
+    img.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(e); }
     });
 }
 
 function makeSlider(images, altBase = "") {
     let i = 0;
-    const img = el("img", { src: images[0], alt: altBase ? `${altBase} 1` : "", loading: "lazy" });
+    const img = el("img", { src: images[0], alt: altBase ? `${altBase} 1` : "", loading: "lazy", decoding: "async" });
     const prev = el("button", { class: "slider-btn slider-prev", "aria-label": "anterior" }, "‹");
     const next = el("button", { class: "slider-btn slider-next", "aria-label": "siguiente" }, "›");
     prev.addEventListener("click", (e) => {
@@ -52,8 +59,7 @@ function makeSlider(images, altBase = "") {
 // al contenedor del slider. Carga las imágenes en paralelo solo para leer
 // sus dimensiones naturales (los navegadores cachean, así que el slider
 // real las reutiliza). Si alguna falla se ignora.
-function applyAdaptiveRatio(sliderEl, imageUrls) {
-    if (!sliderEl || !imageUrls || imageUrls.length === 0) return;
+function measureAdaptiveRatio(sliderEl, imageUrls) {
     const ratios = [];
     let done = 0;
     const finish = () => {
@@ -76,6 +82,48 @@ function applyAdaptiveRatio(sliderEl, imageUrls) {
     });
 }
 
+// Difiere la medición del ratio hasta que el slider esté cerca del viewport,
+// para no descargar todas las imágenes de todas las galerías de golpe.
+function applyAdaptiveRatio(sliderEl, imageUrls) {
+    if (!sliderEl || !imageUrls || imageUrls.length === 0) return;
+    if (typeof IntersectionObserver === "undefined") {
+        measureAdaptiveRatio(sliderEl, imageUrls);
+        return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                observer.disconnect();
+                measureAdaptiveRatio(sliderEl, imageUrls);
+            }
+        }
+    }, { root: null, rootMargin: "200px" });
+    observer.observe(sliderEl);
+}
+
+// Media de un item (news/publications): slider si hay varias imágenes,
+// si no una única imagen zoomable. Devuelve null si no hay imagen.
+function itemMedia(item, titleStr) {
+    const singleSrc = item.image || item.images?.[0];
+    if (item.images?.length > 1) {
+        return makeSlider(item.images, titleStr);
+    }
+    if (!singleSrc) return null;
+    const img = el("img", { src: singleSrc, alt: titleStr, loading: "lazy", decoding: "async" });
+    zoomable(img, () => [singleSrc], () => 0);
+    return img;
+}
+
+// Lista de links "↗ link" / "↗ link N". Devuelve null si no hay links.
+function linkList(links, className) {
+    if (!links?.length) return null;
+    return el("div", { class: className },
+        ...links.map((u, i) => el("a", { href: safeHref(u), target: "_blank", rel: "noopener" },
+            i === 0 ? "↗ link" : `↗ link ${i + 1}`
+        ))
+    );
+}
+
 function vimeoEmbed(url) {
     const id = (url || "").match(/vimeo\.com\/(\d+)/)?.[1];
     if (!id) return null;
@@ -91,6 +139,34 @@ function vimeoEmbed(url) {
     );
 }
 
+// Resuelve las rutas de una galería de proyecto: si ya son absolutas
+// (http(s):// o data/) se dejan tal cual, si no se anteponen a la carpeta del proyecto.
+function resolveGalleryImages(imgs, slug) {
+    const base = `data/_works/${slug}/`;
+    return imgs.map(src => /^(?:https?:\/\/|data\/)/.test(src) ? src : base + src);
+}
+
+// Construye una sección de galería de proyecto (slider o imagen única + caption).
+function gallerySection(name, imgs, slug, titleStr) {
+    if (!imgs || !imgs.length) return null;
+    const full = resolveGalleryImages(imgs, slug);
+    const label = name || "";
+    const altBase = `${titleStr} — ${name || "imagen"}`;
+    let media;
+    if (full.length > 1) {
+        media = makeSlider(full, altBase);
+        // Ratio adaptativo: el slider se amolda al promedio de su galería
+        applyAdaptiveRatio(media, full);
+    } else {
+        media = el("img", { src: full[0], alt: `${altBase} 1`, loading: "lazy", decoding: "async" });
+        zoomable(media, () => full, () => 0);
+    }
+    return el("section", { class: "project-gallery-section" },
+        media,
+        label ? el("div", { class: "project-section-title gallery-caption", html: md(label) }) : null,
+    );
+}
+
 // ---------- About ----------
 export function renderAbout() {
     const v = $("#viewer-content");
@@ -98,7 +174,7 @@ export function renderAbout() {
     const bio = tfa(a.bio);
     v.replaceChildren(el("article", { class: "view-about" },
         ...bio.map(p => el("p", { html: md(p) })),
-        a.image ? el("img", { class: "view-about-image", src: a.image, alt: "", loading: "lazy" }) : null,
+        a.image ? el("img", { class: "view-about-image", src: a.image, alt: "", loading: "lazy", decoding: "async" }) : null,
         el("p", { class: "view-about-web" },
             "web:",
             el("a", { href: "https://meowrhino.studio", target: "_blank", rel: "noopener" }, "meowrhino.studio")
@@ -110,12 +186,13 @@ export function renderAbout() {
 export function renderContact() {
     const v = $("#viewer-content");
     const c = state.about?.contact || {};
+    const email = c.email ? c.email.replace(" [@] ", "@") : null;
     v.replaceChildren(el("article", { class: "view-contact" },
-        c.image ? el("img", { class: "view-contact-image", src: c.image, alt: "", loading: "lazy" }) : null,
-        c.email ? el("p", {}, el("a", { href: `mailto:${c.email.replace(" [@] ", "@")}` }, c.email)) : null,
+        c.image ? el("img", { class: "view-contact-image", src: c.image, alt: "", loading: "lazy", decoding: "async" }) : null,
+        email ? el("p", {}, el("a", { href: safeHref(`mailto:${email}`) }, email)) : null,
         (c.instagram || c.instagram_url) ? el("p", {},
             c.instagram_url
-                ? el("a", { href: c.instagram_url, target: "_blank", rel: "noopener" }, c.instagram || "instagram")
+                ? el("a", { href: safeHref(c.instagram_url), target: "_blank", rel: "noopener" }, c.instagram || "instagram")
                 : c.instagram
         ) : null,
     ));
@@ -128,25 +205,14 @@ export function renderNews() {
     v.replaceChildren(el("div", { class: "view-news" },
         ...items.map(n => {
             const titleStr = tf(n.title) || "";
-            const singleSrc = n.image || n.images?.[0];
-            let media = null;
-            if (n.images?.length > 1) {
-                media = makeSlider(n.images, titleStr);
-            } else if (singleSrc) {
-                media = el("img", { src: singleSrc, alt: titleStr, loading: "lazy" });
-                zoomable(media, () => [singleSrc], () => 0);
-            }
+            const media = itemMedia(n, titleStr);
             return el("article", { class: "news-item" },
                 el("div", { class: "news-media" }, media),
                 el("div", { class: "news-body" },
                     n.year ? el("div", { class: "news-year" }, String(n.year)) : null,
                     titleStr ? el("div", { class: "news-title", html: md(titleStr) }) : null,
                     n.description ? el("div", { class: "news-desc" }, ...richParagraphs(n.description)) : null,
-                    n.links?.length ? el("div", { class: "news-links" },
-                        ...n.links.map((u, i) => el("a", { href: u, target: "_blank", rel: "noopener" },
-                            i === 0 ? "↗ link" : `↗ link ${i + 1}`
-                        ))
-                    ) : null,
+                    linkList(n.links, "news-links"),
                 )
             );
         })
@@ -162,22 +228,11 @@ export function renderPublications() {
             const titleStr = tf(p.title) || "";
             return el("article", { class: "pub-item" },
                 el("div", { class: "pub-body" },
-                    el("h3", { html: p.year ? `${p.year}. ${md(titleStr)}` : md(titleStr) }),
+                    el("h3", { html: md(p.year ? `${p.year}. ${titleStr}` : titleStr) }),
                     p.description ? el("div", { class: "pub-desc" }, ...richParagraphs(p.description)) : null,
-                    p.links?.length ? el("div", { class: "pub-links" },
-                        ...p.links.map((u, i) => el("a", { href: u, target: "_blank", rel: "noopener" },
-                            i === 0 ? "↗ link" : `↗ link ${i + 1}`
-                        ))
-                    ) : null,
+                    linkList(p.links, "pub-links"),
                 ),
-                el("div", { class: "pub-media" }, (() => {
-                    const singleSrc = p.image || p.images?.[0];
-                    if (p.images?.length > 1) return makeSlider(p.images, titleStr);
-                    if (!singleSrc) return null;
-                    const im = el("img", { src: singleSrc, alt: titleStr, loading: "lazy" });
-                    zoomable(im, () => [singleSrc], () => 0);
-                    return im;
-                })())
+                el("div", { class: "pub-media" }, itemMedia(p, titleStr))
             );
         })
     ));
@@ -201,8 +256,11 @@ export function renderProject(slug) {
     const fichaLine = [ficha.year, tf(ficha.type), ficha.duration].filter(Boolean).join(" · ");
     const info = richParagraphs(p.info);
     const creditos = richParagraphs(p.creditos);
-    const links = Array.isArray(p.links) ? p.links : [];
-    const gallerys = Array.isArray(p.gallerys) ? p.gallerys : [];
+    // Solo se aceptan pares bien formados: una entrada rota no debe tirar toda la obra.
+    const links = (Array.isArray(p.links) ? p.links : [])
+        .filter(l => Array.isArray(l) && l[0] && l[1]);
+    const gallerys = (Array.isArray(p.gallerys) ? p.gallerys : [])
+        .filter(g => Array.isArray(g) && Array.isArray(g[1]));
     const trailerNode = vimeoEmbed(p.trailer || p.video);
     // trailer_pos: "antes" muestra el trailer antes de las galerías; por defecto va después.
     const trailerBefore = ["antes", "pre"].includes((p.trailer_pos || "").toLowerCase());
@@ -217,30 +275,11 @@ export function renderProject(slug) {
             : null,
         links.length
             ? el("div", { class: "project-links" },
-                ...links.map(([name, url]) => el("a", { href: url, target: "_blank", rel: "noopener" }, `↗ ${name}`))
+                ...links.map(([name, url]) => el("a", { href: safeHref(url), target: "_blank", rel: "noopener" }, `↗ ${name}`))
             )
             : null,
         trailerBefore ? trailerNode : null,
-        ...gallerys.map(([name, imgs]) => {
-            if (!imgs || !imgs.length) return null;
-            const base = `data/_works/${p.slug}/`;
-            const full = imgs.map(src => /^(?:https?:\/\/|data\/)/.test(src) ? src : base + src);
-            const label = name || "";
-            const altBase = `${titleStr} — ${name || "imagen"}`;
-            let media;
-            if (full.length > 1) {
-                media = makeSlider(full, altBase);
-                // Ratio adaptativo: el slider se amolda al promedio de su galería
-                applyAdaptiveRatio(media, full);
-            } else {
-                media = el("img", { src: full[0], alt: `${altBase} 1`, loading: "lazy" });
-                zoomable(media, () => full, () => 0);
-            }
-            return el("section", { class: "project-gallery-section" },
-                media,
-                label ? el("div", { class: "project-section-title gallery-caption", html: md(label) }) : null,
-            );
-        }),
+        ...gallerys.map(([name, imgs]) => gallerySection(name, imgs, p.slug, titleStr)),
         trailerBefore ? null : trailerNode,
         creditos.length
             ? el("div", { class: "project-credits" },
@@ -277,6 +316,7 @@ export function renderPhotos() {
             src,
             alt: `diary ${idx + 1}`,
             loading: "lazy",
+            decoding: "async",
             on: { error: (e) => e.currentTarget.classList.add("is-missing") },
         });
         zoomable(im, () => urls, () => idx);

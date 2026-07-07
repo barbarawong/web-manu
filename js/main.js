@@ -1,7 +1,7 @@
 // Router + init. Default view = "news". Fade suave al cambiar de vista.
 
 import { $ } from "./dom.js";
-import { state, loadAll, setView as setStateView } from "./data.js";
+import { state, loadAll, setView as setStateView, updateCanonical } from "./data.js";
 import { renderMenu, setHandlers } from "./menu.js";
 import { shouldShowWelcome, startWelcome, skipWelcome } from "./welcome.js";
 import {
@@ -18,7 +18,10 @@ function readHash() {
     const h = location.hash.replace(/^#/, "");
     if (!h) return { view: DEFAULT_VIEW };
     const [view, ...rest] = h.split("/");
-    return { view, payload: rest.join("/") || undefined };
+    const raw = rest.join("/");
+    let payload = raw || undefined;
+    try { if (raw) payload = decodeURIComponent(raw); } catch {}
+    return { view, payload };
 }
 
 let prevKey = null;
@@ -44,6 +47,14 @@ function navigate(view, payload) {
 function setLang(lang) {
     state.lang = lang;
     document.documentElement.lang = lang;
+    try { localStorage.setItem("lang", lang); } catch {}
+    // Reflejar el idioma en la URL (?lang=xx) preservando el hash actual.
+    try {
+        const url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState(history.state, "", url.pathname + url.search + url.hash);
+    } catch {}
+    updateCanonical();
     // Cambio de idioma → no fade (mismo contenido, refresco directo)
     renderNow();
 }
