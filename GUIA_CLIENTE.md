@@ -48,7 +48,6 @@ Esto es lo que ve cualquier visitante. Conviene que lo conozcas para entender d�
 
 ### La pantalla de bienvenida
 - Al entrar, se ven **vídeos a pantalla completa** con un botón **"entrar"**.
-- Hay un **botón de sonido** (altavoz) para activar/silenciar el audio.
 - Una vez dentro, si **haces clic en el nombre** ("Bárbara Sánchez Barroso" arriba), **vuelves a la bienvenida**.
 
 ### El menú y las secciones
@@ -97,7 +96,8 @@ data/
 ├── _news/              # Imágenes de noticias
 ├── _publications/      # Imágenes de publicaciones
 ├── _photos/            # Fotos del diario
-└── _works/             # Una carpeta por obra (sus galerías)
+├── _works/             # Una carpeta por obra (sus galerías)
+└── PDF/                # CV en PDF (cv_es.pdf, cv_en.pdf, cv_cat.pdf)
 ```
 
 Las carpetas que empiezan por guion bajo (`_`) son **donde van las imágenes**. Los archivos `.json` son **donde van los textos**.
@@ -163,6 +163,9 @@ El mismo texto también se puede escribir como un solo bloque separando párrafo
 - En los **títulos** de obra puedes usar `<br>` para partir en dos líneas, y `*cursiva*` / `**negrita**`.
 - Los **nombres de galería** y los **títulos** **respetan las mayúsculas** tal y como las escribas (el menú y la navegación, en cambio, se ven siempre en minúscula, es parte del diseño).
 
+### Imágenes verticales
+- Si una galería tiene fotos verticales y en pantalla de ordenador quedan demasiado grandes, añade la palabra `VERTICAL` al nombre de alguno de sus archivos (por ejemplo `1_VERTICAL.webp`). Toda esa galería se mostrará más estrecha (420px en vez de 720px) para que quepa mejor en pantalla.
+
 ---
 
 ## 7. Editar cada sección
@@ -200,6 +203,7 @@ Cada noticia es un bloque entre llaves `{ ... }`:
     "duration": "10:00 min"
   },
   "info": { "es": ["..."], "en": ["..."], "ca": ["..."] },
+  "info_colapsable": { "es": [], "en": [], "ca": [] },
   "links": [["Nombre del enlace", "https://..."]],
   "trailer": "https://vimeo.com/123456",
   "trailer_pos": "despues",
@@ -226,6 +230,7 @@ Otros campos:
 - **`slug`** debe coincidir con el **nombre de la carpeta** de imágenes: `data/_works/mi-obra/`.
 - **`trailer_pos`** (opcional): `"antes"` pone el tráiler antes de las galerías; sin el campo (o `"despues"`), va después.
 - **Galerías**: cada una es `["nombre", ["lista de imágenes"]]`. Las rutas son **relativas a la carpeta de la obra**: `"1.webp"` → `data/_works/mi-obra/1.webp`; si está en una subcarpeta, `"subcarpeta/1.webp"`. Con más de una imagen, se ve como slider.
+- **`info_colapsable`** (opcional): texto extra que solo aparece si el visitante pulsa un enlace "ver más" debajo del texto principal (`info`). Se rellena igual que `info` (mismas reglas de párrafos, idiomas, cursiva/negrita — ver §6). Si lo dejas vacío (`[]` en los tres idiomas, como sale por defecto), simplemente no aparece ningún "ver más" en esa obra.
 
 ### Sobre y contacto (`data/about.json`)
 
@@ -246,6 +251,17 @@ Otros campos:
 - **Cambiar las fotos:** sustituye `about.webp` / `contact.webp` dentro de `data/_about/` por las nuevas en `.webp`. Si mantienes el **mismo nombre**, no hace falta tocar el JSON; si las llamas distinto, actualiza la ruta `"image"`.
 
 > El email se escribe con ` [@] ` (con corchetes y espacios) a propósito, para evitar que los robots de spam lo recojan. La web lo convierte en `@` automáticamente.
+
+### CV — `data/PDF/`
+Si subes tu currículum en PDF a la carpeta `data/PDF/` con estos nombres exactos:
+
+```
+data/PDF/cv_es.pdf
+data/PDF/cv_en.pdf
+data/PDF/cv_cat.pdf
+```
+
+la web muestra automáticamente un enlace **"ver CV"** justo debajo del texto de la sección "sobre", en el idioma que esté viendo la persona. Si falta el PDF de un idioma concreto, simplemente no aparece el enlace en ese idioma (no da error). No hace falta tocar ningún JSON: basta con subir el archivo con el nombre correcto.
 
 ### Diario fotográfico — `data/photos.json`
 
