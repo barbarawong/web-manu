@@ -908,15 +908,22 @@
     },
     "gallerys": [
       [
-        "Galería 1",
+        "Fotogramas",
         [
-          "data/_news/008.webp"
+          "fotogramas/1.webp",
+          "fotogramas/2.webp",
+          "fotogramas/3.webp",
+          "fotogramas/4.webp",
+          "fotogramas/5.webp"
         ]
       ],
       [
-        "Galería 2",
+        "Installation views",
         [
-          "data/_news/009.webp"
+          "installation-views/1.webp",
+          "installation-views/2.webp",
+          "installation-views/3.webp",
+          "installation-views/4.webp"
         ]
       ]
     ]
