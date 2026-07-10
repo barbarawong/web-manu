@@ -836,9 +836,9 @@
     "ficha_tecnica": {
       "year": "2018",
       "type": {
-        "es": "Exposición / instalación",
-        "en": "Exhibition / installation",
-        "ca": "Exposició / instal·lació"
+        "es": "video instalación / film",
+        "en": "video installation / film",
+        "ca": "videoinstal·lació / film"
       },
       "duration": ""
     },
@@ -884,24 +884,24 @@
       "es": [
         "Director, producer and writer: Bárbara Sánchez Barroso",
         "Director de fotografía: Juan Palacios",
-        "Voz: Emi Kodama",
         "Edición, sonido y color: Juan Palacios",
+        "Voz: Emi Kodama",
         "Traducción: Rubén Verdú",
         "Producido por: Fundació Joan Miró"
       ],
       "en": [
         "Director, producer and writer: Bárbara Sánchez Barroso",
         "Director of photography: Juan Palacios",
-        "Voice: Emi Kodama",
         "Editing, sound and color: Juan Palacios",
+        "Voice: Emi Kodama",
         "Translation: Rubén Verdú",
         "Produced by: Fundació Joan Miró"
       ],
       "ca": [
         "Director, producer and writer: Bárbara Sánchez Barroso",
         "Director de fotografia: Juan Palacios",
-        "Veu: Emi Kodama",
         "Edició, so i color: Juan Palacios",
+        "Veu: Emi Kodama",
         "Traducció: Rubén Verdú",
         "Produït per: Fundació Joan Miró"
       ]
