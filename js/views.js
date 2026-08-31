@@ -318,12 +318,10 @@ export function renderProject(slug) {
     const trailerNode = vimeoEmbed(p.trailer || p.video);
     // Videos: embed + caption (Carta N / Letter N)
     const videosNodes = (Array.isArray(p.videos) ? p.videos : [])
-        .map((v, idx) => {
+        .map((v) => {
             const embed = vimeoEmbed(v);
             if (!embed) return null;
-            const labelBase = t('letter');
-            const caption = el('div', { class: 'project-video-caption' }, `${labelBase} ${idx + 1}`);
-            return el('div', { class: 'project-video-wrap' }, embed, caption);
+            return embed;
         })
         .filter(Boolean);
     // trailer_pos: "antes" muestra el trailer antes de las galerías; por defecto va después.
