@@ -310,9 +310,19 @@ export function renderProject(slug) {
     const info = richParagraphs(p.info);
     const infoMore = richParagraphs(p.info_colapsable);
     const creditos = richParagraphs(p.creditos);
-    // Solo se aceptan pares bien formados: una entrada rota no debe tirar toda la obra.
+    // Normalizamos `p.links` para aceptar tanto arrays [name, url] como objetos { label: {es,en,ca} | string, url }.
     const links = (Array.isArray(p.links) ? p.links : [])
-        .filter(l => Array.isArray(l) && l[0] && l[1]);
+        .map(l => {
+            if (Array.isArray(l) && l[0] && l[1]) return { label: l[0], url: l[1] };
+            if (l && typeof l === 'object' && l.url) {
+                const label = typeof l.label === 'string'
+                    ? l.label
+                    : (l.label && (l.label[state.lang] || l.label.es || l.label.en || l.label.ca)) || '';
+                return { label: label || l.url, url: l.url };
+            }
+            return null;
+        })
+        .filter(Boolean);
     const gallerys = (Array.isArray(p.gallerys) ? p.gallerys : [])
         .filter(g => Array.isArray(g) && Array.isArray(g[1]));
     const trailerNode = vimeoEmbed(p.trailer || p.video);
@@ -332,14 +342,6 @@ export function renderProject(slug) {
             el("h2", { html: md(titleStr) }),
             fichaLine ? el("div", { class: "project-meta" }, fichaLine) : null,
         ),
-            // Enlace destacado a la playlist si existe en p.links (objeto con url)
-            (Array.isArray(p.links) ? p.links.find(l => l && typeof l === 'object' && l.url && l.url.includes('vimeo.com/showcase')) : null)
-                ? el('div', { class: 'project-playlist' },
-                    el('a', { href: safeHref(p.links.find(l => l && typeof l === 'object' && l.url && l.url.includes('vimeo.com/showcase')).url), target: '_blank', rel: 'noopener' },
-                        (p.links.find(l => l && typeof l === 'object' && l.label && l.label[state.lang]) || p.links.find(l => l && typeof l === 'object' && l.label) || { label: { es: 'Ver todas las cartas', en: 'See all letters', ca: 'Veure totes les cartes' } }).label?.[state.lang] || 'Ver todas las cartas'
-                    )
-                )
-                : null,
         info.length
             ? el("div", { class: "project-info" }, ...info)
             : null,
