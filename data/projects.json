@@ -1074,14 +1074,11 @@
           "ca": "Fotogrames de Cartes des del bosc"
         },
         [
-          "fotogramas/001.webp?v=20260831",
-          "fotogramas/002.webp?v=20260831",
-          "fotogramas/003.webp?v=20260831",
-          "fotogramas/004.webp?v=20260831",
-          "fotogramas/005.webp?v=20260831",
-          "fotogramas/006.webp?v=20260831",
-          "fotogramas/007.webp?v=20260831",
-          "fotogramas/008.webp?v=20260831"
+          "fotogramas/1.webp",
+          "fotogramas/2.webp",
+          "fotogramas/3.webp",
+          "fotogramas/4.webp",
+          "fotogramas/5.webp"
         ]
       ],
       [
@@ -1091,7 +1088,10 @@
           "ca": "Fotografies"
         },
         [
-          "fotografías/placeholder.webp?v=20260831"
+          "fotografías/1.webp",
+          "fotografías/2.webp",
+          "fotografías/3.webp",
+          "fotografías/4.webp"
         ]
       ]
     ]
