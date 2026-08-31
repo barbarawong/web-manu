@@ -1049,11 +1049,15 @@
     "gallerys": [
       [
         "fotografías",
-        []
+        [
+          "fotografías/placeholder.webp?v=20260831"
+        ]
       ],
       [
         "fotogramas",
-        []
+        [
+          "fotogramas/placeholder.webp?v=20260831"
+        ]
       ]
     ]
   }
