@@ -316,8 +316,15 @@ export function renderProject(slug) {
     const gallerys = (Array.isArray(p.gallerys) ? p.gallerys : [])
         .filter(g => Array.isArray(g) && Array.isArray(g[1]));
     const trailerNode = vimeoEmbed(p.trailer || p.video);
+    // Videos: embed + caption (Carta N / Letter N)
     const videosNodes = (Array.isArray(p.videos) ? p.videos : [])
-        .map(v => vimeoEmbed(v))
+        .map((v, idx) => {
+            const embed = vimeoEmbed(v);
+            if (!embed) return null;
+            const labelBase = state.lang === 'en' ? 'Letter' : 'Carta';
+            const caption = el('div', { class: 'project-video-caption' }, `${labelBase} ${idx + 1}`);
+            return el('div', { class: 'project-video-wrap' }, embed, caption);
+        })
         .filter(Boolean);
     // trailer_pos: "antes" muestra el trailer antes de las galerías; por defecto va después.
     const trailerBefore = ["antes", "pre"].includes((p.trailer_pos || "").toLowerCase());
@@ -327,6 +334,14 @@ export function renderProject(slug) {
             el("h2", { html: md(titleStr) }),
             fichaLine ? el("div", { class: "project-meta" }, fichaLine) : null,
         ),
+            // Enlace destacado a la playlist si existe en p.links (objeto con url)
+            (Array.isArray(p.links) ? p.links.find(l => l && typeof l === 'object' && l.url && l.url.includes('vimeo.com/showcase')) : null)
+                ? el('div', { class: 'project-playlist' },
+                    el('a', { href: safeHref(p.links.find(l => l && typeof l === 'object' && l.url && l.url.includes('vimeo.com/showcase')).url), target: '_blank', rel: 'noopener' },
+                        (p.links.find(l => l && typeof l === 'object' && l.label && l.label[state.lang]) || p.links.find(l => l && typeof l === 'object' && l.label) || { label: { es: 'Ver todas las cartas', en: 'See all letters', ca: 'Veure totes les cartes' } }).label?.[state.lang] || 'Ver todas las cartas'
+                    )
+                )
+                : null,
         info.length
             ? el("div", { class: "project-info" }, ...info)
             : null,
