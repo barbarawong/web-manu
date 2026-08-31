@@ -1068,7 +1068,11 @@
     },
     "gallerys": [
       [
-        "Video stills from <em>Letters from the Forest</em>",
+        {
+          "es": "Fotogramas de Cartas desde el bosque",
+          "en": "Video stills from Letters from the Forest",
+          "ca": "Fotogrames de Cartes des del bosc"
+        },
         [
           "fotografías/placeholder.webp?v=20260831"
         ]

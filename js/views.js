@@ -150,8 +150,11 @@ function resolveGalleryImages(imgs, slug) {
 function gallerySection(name, imgs, slug, titleStr) {
     if (!imgs || !imgs.length) return null;
     const full = resolveGalleryImages(imgs, slug);
-    const label = name || "";
-    const altBase = `${titleStr} — ${name || "imagen"}`;
+    // `name` can be a string or an object with translations { es, en, ca }.
+    const label = (typeof name === 'object')
+        ? (name[state.lang] || name.en || name.es || Object.values(name)[0])
+        : (name || "");
+    const altBase = `${titleStr} — ${typeof label === 'string' && label ? label : "imagen"}`;
     let media;
     if (full.length > 1) {
         media = makeSlider(full, altBase);
