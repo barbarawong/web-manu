@@ -28,7 +28,16 @@
       "en": [],
       "ca": []
     },
-    "links": [],
+    "links": [
+      {
+        "label": {
+          "es": "Enlace a lista de reproducción de las 7 cartas",
+          "en": "Link to playlist of the 7 letters",
+          "ca": "Enllaç a la llista de reproducció de les 7 cartes"
+        },
+        "url": "https://vimeo.com/showcase/435709"
+      }
+    ],
     "trailer": "https://vimeo.com/1173077278",
     "creditos": {
       "es": [],
