@@ -353,7 +353,7 @@ export function renderProject(slug) {
             const others = links.filter(l => l !== showcase);
             return el('div', { class: 'project-links-wrapper' },
                 showcase ? el('div', { class: 'project-playlist' },
-                    el('a', { class: 'project-playlist-btn', href: safeHref(showcase.url), target: '_blank', rel: 'noopener' }, showcase.label)
+                    el('a', { class: 'project-playlist-btn', href: safeHref(showcase.url), target: '_blank', rel: 'noopener' }, `↗ ${showcase.label}`)
                 ) : null,
                 others.length ? el('div', { class: 'project-links' },
                     ...others.map(l => el('a', { href: safeHref(l.url), target: '_blank', rel: 'noopener' }, `↗ ${l.label}`))
