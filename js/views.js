@@ -346,11 +346,20 @@ export function renderProject(slug) {
             ? el("div", { class: "project-info" }, ...info)
             : null,
         ...(infoMore.length ? infoMoreToggle(infoMore) : []),
-        links.length
-            ? el("div", { class: "project-links" },
-                ...links.map(([name, url]) => el("a", { href: safeHref(url), target: "_blank", rel: "noopener" }, `↗ ${name}`))
-            )
-            : null,
+        // Mostrar enlace de playlist destacado (showcase) como botón, luego el resto de links.
+        (() => {
+            if (!links.length) return null;
+            const showcase = links.find(l => /vimeo\.com\/showcase/.test(l.url));
+            const others = links.filter(l => l !== showcase);
+            return el('div', { class: 'project-links-wrapper' },
+                showcase ? el('div', { class: 'project-playlist' },
+                    el('a', { class: 'project-playlist-btn', href: safeHref(showcase.url), target: '_blank', rel: 'noopener' }, showcase.label)
+                ) : null,
+                others.length ? el('div', { class: 'project-links' },
+                    ...others.map(l => el('a', { href: safeHref(l.url), target: '_blank', rel: 'noopener' }, `↗ ${l.label}`))
+                ) : null
+            );
+        })(),
         trailerBefore ? trailerNode : null,
         ...videosNodes,
         ...gallerys.map(([name, imgs]) => gallerySection(name, imgs, p.slug, titleStr)),
