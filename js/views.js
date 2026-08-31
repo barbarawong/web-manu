@@ -316,6 +316,9 @@ export function renderProject(slug) {
     const gallerys = (Array.isArray(p.gallerys) ? p.gallerys : [])
         .filter(g => Array.isArray(g) && Array.isArray(g[1]));
     const trailerNode = vimeoEmbed(p.trailer || p.video);
+    const videosNodes = (Array.isArray(p.videos) ? p.videos : [])
+        .map(v => vimeoEmbed(v))
+        .filter(Boolean);
     // trailer_pos: "antes" muestra el trailer antes de las galerías; por defecto va después.
     const trailerBefore = ["antes", "pre"].includes((p.trailer_pos || "").toLowerCase());
 
@@ -334,6 +337,7 @@ export function renderProject(slug) {
             )
             : null,
         trailerBefore ? trailerNode : null,
+        ...videosNodes,
         ...gallerys.map(([name, imgs]) => gallerySection(name, imgs, p.slug, titleStr)),
         trailerBefore ? null : trailerNode,
         creditos.length
