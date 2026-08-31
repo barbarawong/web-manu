@@ -321,7 +321,7 @@ export function renderProject(slug) {
         .map((v, idx) => {
             const embed = vimeoEmbed(v);
             if (!embed) return null;
-            const labelBase = state.lang === 'en' ? 'Letter' : 'Carta';
+            const labelBase = t('letter');
             const caption = el('div', { class: 'project-video-caption' }, `${labelBase} ${idx + 1}`);
             return el('div', { class: 'project-video-wrap' }, embed, caption);
         })

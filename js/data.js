@@ -21,6 +21,7 @@ export const I18N = {
     see_more:     { es: "ver más",      en: "see more",     ca: "veure més" },
     see_less:     { es: "ver menos",    en: "see less",     ca: "veure menys" },
     cv:           { es: "ver CV",       en: "see CV",       ca: "veure CV" },
+    letter:       { es: "Carta",        en: "Letter",       ca: "Carta" },
 };
 
 export const t  = (k) => (I18N[k] && I18N[k][state.lang]) || I18N[k]?.es || k;
