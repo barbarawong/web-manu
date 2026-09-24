@@ -2,6 +2,40 @@
   {
     "year": "2026",
     "title": {
+      "es": "Coexistir en los márgenes. Prácticas artísticas sobre ecología en el territorio",
+      "en": "Coexisting on the margins. Artistic practices on ecology in the territory",
+      "ca": "Coexistir als marges. Pràctiques artístiques sobre ecologia al territori"
+    },
+    "description": {
+      "es": "Sábado 17 de octubre\n\nParc del Turó de Can Mates\n\n**Con Beatriz Regueira, Anibal G. Arregui, Ariadna Cordal, Paula Bruna, Laura Benítez, Helen Torres, Gerard Ortín, Maddi Barber, Marina Lameiro, Júlia Izaguirre y Adrià Expòsit Goy.**\n\nUna jornada de activación colectiva que combina prácticas artísticas, pensamiento crítico y experiencia situada para cuestionar nuestra convivencia con otras especies en contextos urbanos y periurbanos. Habitar e interrogar aquello que habitualmente se considera indeseable para imaginar nuevas formas de relación; buscar una mirada respetuosa que reivindique los cuerpos y las presencias en los márgenes, así como las formas de vida que también enfrentan las crisis ecológicas actuales y preguntarnos qué imaginarios de futuro podemos construir con ellas.",
+      "en": "Saturday 17 October\n\nParc del Turó de Can Mates\n\n**With Beatriz Regueira, Anibal G. Arregui, Ariadna Cordal, Paula Bruna, Laura Benítez, Helen Torres, Gerard Ortín, Maddi Barber, Marina Lameiro, Júlia Izaguirre and Adrià Expòsit Goy.**\n\nA collective activation day that brings together artistic practices, critical thinking and situated experience to question our coexistence with other species in urban and peri-urban contexts. To inhabit and interrogate what is usually considered undesirable in order to imagine new forms of relation; to seek a respectful gaze that vindicates bodies and presences on the margins, as well as the forms of life that also face current ecological crises and ask ourselves what futures we can build with them.",
+      "ca": "Dissabte 17 d'octubre\n\nParc del Turó de Can Mates\n\n**Amb Beatriz Regueira, Anibal G. Arregui, Ariadna Cordal, Paula Bruna, Laura Benítez, Helen Torres, Gerard Ortín, Maddi Barber, Marina Lameiro, Júlia Izaguirre i Adrià Expòsit Goy.**\n\nUna jornada d’activació col·lectiva que combina pràctiques artístiques, pensament crític i experiència situada per qüestionar la nostra convivència amb altres espècies en contextos urbans i periurbans. Habitar i interrogar allò que habitualment es considera indesitjable per imaginar noves formes de relació; cercar una mirada respectuosa que reivindiqui els cossos i les presències als marges, així com les formes de vida que també afronten les crisis ecològiques actuals i preguntar-nos quins imaginaris de futur podem construir amb elles."
+    },
+    "image": "data/_news/079.webp",
+    "links": [
+      "https://indexartistes.santcugat.cat/activitat/jornada-coexistir-als-marges-practiques-artistiques-sobre-ecologia-al-territori"
+    ]
+  },
+  {
+    "year": "2026",
+    "title": {
+      "es": "Screening Insolente, Il balconcino, Milán",
+      "en": "Screening Insolente, Il balconcino, Milan",
+      "ca": "Screening Insolente, Il balconcino, Milà"
+    },
+    "description": {
+      "es": "2 de octubre, 19:30h\n\nIl balconcino, Via Tofane 3, Milano\n\nBotanical Dream será proyectada junto a obras de Laurence Favre y Eva Giolo dentro del programa Screening Insolente, en una sesión dedicada al cine contemporáneo y experimental en Milán.\n\nTre film che si muovono tra umano e più-che-umano, richiamando tutti i nostri sensi, lasciando che le immagini strabordino nell'ambiente attorno.",
+      "en": "October 2, 7:30pm\n\nIl balconcino, Via Tofane 3, Milan\n\nBotanical Dream will be screened together with works by Laurence Favre and Eva Giolo as part of the Screening Insolente programme, in a session dedicated to contemporary and experimental cinema in Milan.\n\nTre film che si muovono tra umano e più-che-umano, richiamando tutti i nostri sensi, lasciando che le immagini strabordino nell'ambiente attorno.",
+      "ca": "2 d'octubre, 19:30h\n\nIl balconcino, Via Tofane 3, Milà\n\nBotanical Dream serà projectada juntament amb obres de Laurence Favre i Eva Giolo dins del programa Screening Insolente, en una sessió dedicada al cinema contemporani i experimental a Milà.\n\nTre film che si muovono tra umano e più-che-umano, richiamando tutti i nostri sensi, lasciando che le immagini strabordino nell'ambiente attorno."
+    },
+    "image": "data/_news/078.webp",
+    "links": [
+      "https://www.instagram.com/insolente.visioni/"
+    ]
+  },
+  {
+    "year": "2026",
+    "title": {
       "es": "Els peregrins en el Festival Alcances, en Cádiz",
       "en": "Els peregrins at the Alcances Festival, in Cádiz",
       "ca": "Els peregrins al Festival Alcances, a Cadis"
@@ -11,40 +45,10 @@
       "en": "Festival Alcances, Cádiz\n\nProgram 1 · Official short films section\n\nEls peregrins is part of the official programme of the Alcances Festival, where Bárbara S. Barroso’s piece is presented in the short film section of the event.",
       "ca": "Festival Alcances, Cadis\n\nPrograma 1 · Secció oficial curtmetratges\n\nEls peregrins forma part de la programació oficial del festival Alcances, on la peça de Bárbara S. Barroso es presenta a la secció de curtmetratges del certamen."
     },
-    "image": null,
+    "image": "data/_news/077.webp",
     "links": [
       "https://alcances.org/proyectos/seccion-oficial/cortos/programa-1/els-peregrins/"
     ]
-  },
-  {
-    "year": "2026",
-    "title": {
-      "es": "Nueva entrada 02",
-      "en": "New entry 02",
-      "ca": "Nova entrada 02"
-    },
-    "description": {
-      "es": "Segunda entrada nueva para el blog de noticias. Se puede completar con la convocatoria, la fecha exacta y la información de contacto o enlace relacionado.",
-      "en": "Second new entry for the news feed. It can be completed with the call, exact date, and contact or related link information.",
-      "ca": "Segona entrada nova per al feed de notícies. Es pot completar amb la convocatòria, la data exacta i la informació de contacte o enllaç relacionat."
-    },
-    "image": null,
-    "links": []
-  },
-  {
-    "year": "2026",
-    "title": {
-      "es": "Nueva entrada 03",
-      "en": "New entry 03",
-      "ca": "Nova entrada 03"
-    },
-    "description": {
-      "es": "Tercera noticia nueva del proyecto. Este bloque puede alojar la programación, la inauguración o cualquier actualización relevante para la temporada actual.",
-      "en": "Third new news item for the project. This block can host the program, opening, or any relevant update for the current season.",
-      "ca": "Tercera notícia nova del projecte. Aquest bloc pot allotjar la programació, la inauguració o qualsevol actualització rellevant per a la temporada actual."
-    },
-    "image": null,
-    "links": []
   },
   {
     "year": "2026",
