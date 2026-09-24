@@ -180,7 +180,9 @@ const cvExistsCache = new Map();
 
 function checkCvExists(path) {
     if (cvExistsCache.has(path)) return cvExistsCache.get(path);
-    const promise = fetch(path, { method: "HEAD" })
+    const url = new URL(path, window.location.href);
+    url.searchParams.set("v", "20260924");
+    const promise = fetch(url.href, { method: "HEAD" })
         .then(r => r.ok)
         .catch(() => false);
     cvExistsCache.set(path, promise);

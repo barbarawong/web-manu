@@ -1,5 +1,7 @@
 // Estado global, i18n, carga de JSON.
 
+const APP_CACHE_BUSTER = "20260924";
+
 export const state = {
     lang: "es",
     data: null,
@@ -48,7 +50,9 @@ export const tfa = (val) => {
 };
 
 async function loadJSON(path) {
-    const r = await fetch(path, { cache: "no-store" });
+    const url = new URL(path, window.location.href);
+    url.searchParams.set("v", APP_CACHE_BUSTER);
+    const r = await fetch(url.href, { cache: "no-store" });
     if (!r.ok) throw new Error(`${path} → ${r.status}`);
     return r.json();
 }
