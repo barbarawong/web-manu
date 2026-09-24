@@ -2,6 +2,53 @@
   {
     "year": "2026",
     "title": {
+      "es": "Els peregrins en el Festival Alcances, en Cádiz",
+      "en": "Els peregrins at the Alcances Festival, in Cádiz",
+      "ca": "Els peregrins al Festival Alcances, a Cadis"
+    },
+    "description": {
+      "es": "Festival Alcances, Cádiz\n\nPrograma 1 · Sección oficial cortos\n\nEls peregrins forma parte de la programación oficial del festival Alcances, donde la pieza de Bárbara S. Barroso se presenta en la sección de cortometrajes del certamen.",
+      "en": "Festival Alcances, Cádiz\n\nProgram 1 · Official short films section\n\nEls peregrins is part of the official programme of the Alcances Festival, where Bárbara S. Barroso’s piece is presented in the short film section of the event.",
+      "ca": "Festival Alcances, Cadis\n\nPrograma 1 · Secció oficial curtmetratges\n\nEls peregrins forma part de la programació oficial del festival Alcances, on la peça de Bárbara S. Barroso es presenta a la secció de curtmetratges del certamen."
+    },
+    "image": null,
+    "links": [
+      "https://alcances.org/proyectos/seccion-oficial/cortos/programa-1/els-peregrins/"
+    ]
+  },
+  {
+    "year": "2026",
+    "title": {
+      "es": "Nueva entrada 02",
+      "en": "New entry 02",
+      "ca": "Nova entrada 02"
+    },
+    "description": {
+      "es": "Segunda entrada nueva para el blog de noticias. Se puede completar con la convocatoria, la fecha exacta y la información de contacto o enlace relacionado.",
+      "en": "Second new entry for the news feed. It can be completed with the call, exact date, and contact or related link information.",
+      "ca": "Segona entrada nova per al feed de notícies. Es pot completar amb la convocatòria, la data exacta i la informació de contacte o enllaç relacionat."
+    },
+    "image": null,
+    "links": []
+  },
+  {
+    "year": "2026",
+    "title": {
+      "es": "Nueva entrada 03",
+      "en": "New entry 03",
+      "ca": "Nova entrada 03"
+    },
+    "description": {
+      "es": "Tercera noticia nueva del proyecto. Este bloque puede alojar la programación, la inauguración o cualquier actualización relevante para la temporada actual.",
+      "en": "Third new news item for the project. This block can host the program, opening, or any relevant update for the current season.",
+      "ca": "Tercera notícia nova del projecte. Aquest bloc pot allotjar la programació, la inauguració o qualsevol actualització rellevant per a la temporada actual."
+    },
+    "image": null,
+    "links": []
+  },
+  {
+    "year": "2026",
+    "title": {
       "es": "El gesto de filmar. El vídeo en la colección Macba",
       "en": "The Act of Filming. Video in the MACBA Collection",
       "ca": "El gest de filmar. El vídeo a la col·lecció Macba"
