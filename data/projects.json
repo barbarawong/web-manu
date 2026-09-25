@@ -174,16 +174,7 @@
       "en": [],
       "ca": []
     },
-    "links": [
-      {
-        "label": {
-          "es": "Enlace a lista de reproducción de las 7 cartas",
-          "en": "Link to playlist of the 7 letters",
-          "ca": "Enllaç a la llista de reproducció de les 7 cartes"
-        },
-        "url": "https://vimeo.com/showcase/435709"
-      }
-    ],
+    "links": [],
     "trailer": "https://vimeo.com/878483404",
     "creditos": {
       "es": [
@@ -1074,10 +1065,14 @@
       ]
     },
     "links": [
-      [
-        "Lista de reproducción Cartas desde el bosque",
-        "https://vimeo.com/showcase/4357095?share=copy&fl=sm&fe=fs"
-      ]
+      {
+        "label": {
+          "es": "Lista de reproducción de las 7 cartas",
+          "en": "Playlist of the 7 letters",
+          "ca": "Llista de reproducció de les 7 cartes"
+        },
+        "url": "https://vimeo.com/showcase/4357095"
+      }
     ],
     "trailer": "",
     "creditos": {

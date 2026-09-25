@@ -1,7 +1,5 @@
 // Estado global, i18n, carga de JSON.
 
-const APP_CACHE_BUSTER = "20260924";
-
 export const state = {
     lang: "es",
     data: null,
@@ -23,7 +21,6 @@ export const I18N = {
     see_more:     { es: "ver más",      en: "see more",     ca: "veure més" },
     see_less:     { es: "ver menos",    en: "see less",     ca: "veure menys" },
     cv:           { es: "ver CV",       en: "see CV",       ca: "veure CV" },
-    letter:       { es: "Carta",        en: "Letter",       ca: "Carta" },
 };
 
 export const t  = (k) => (I18N[k] && I18N[k][state.lang]) || I18N[k]?.es || k;
@@ -49,10 +46,10 @@ export const tfa = (val) => {
     return [];
 };
 
+// Sin cache busters ni no-store: el servidor manda max-age=0 + ETag, así que el
+// navegador siempre revalida (304 si no ha cambiado) y los cambios se ven al momento.
 async function loadJSON(path) {
-    const url = new URL(path, window.location.href);
-    url.searchParams.set("v", APP_CACHE_BUSTER);
-    const r = await fetch(url.href, { cache: "no-store" });
+    const r = await fetch(path);
     if (!r.ok) throw new Error(`${path} → ${r.status}`);
     return r.json();
 }
