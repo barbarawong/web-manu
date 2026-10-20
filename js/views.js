@@ -3,7 +3,7 @@
 import { $, el } from "./dom.js";
 import { state, t, tf, tfa, findProject } from "./data.js";
 import { openLightbox } from "./lightbox.js";
-import { md, safeHref } from "./text.js";
+import { md, plain, safeHref } from "./text.js";
 
 
 // Texto rico → párrafos. Criterio ÚNICO para info, créditos, news y publications.
@@ -103,7 +103,8 @@ function applyAdaptiveRatio(sliderEl, imageUrls) {
 
 // Media de un item (news/publications): slider si hay varias imágenes,
 // si no una única imagen zoomable. Devuelve null si no hay imagen.
-function itemMedia(item, titleStr) {
+function itemMedia(item, title) {
+    const titleStr = plain(title);
     const singleSrc = item.image || item.images?.[0];
     if (item.images?.length > 1) {
         return makeSlider(item.images, titleStr);
@@ -124,7 +125,7 @@ function linkList(links, className) {
     );
 }
 
-function vimeoEmbed(url) {
+function vimeoEmbed(url, title = "Vimeo") {
     const id = (url || "").match(/vimeo\.com\/(\d+)/)?.[1];
     if (!id) return null;
     return el("div", { class: "project-vimeo" },
@@ -134,7 +135,7 @@ function vimeoEmbed(url) {
             loading: "lazy",
             referrerpolicy: "strict-origin-when-cross-origin",
             allowfullscreen: "",
-            title: "Vimeo trailer",
+            title,
         })
     );
 }
@@ -151,10 +152,10 @@ function gallerySection(name, imgs, slug, titleStr) {
     if (!imgs || !imgs.length) return null;
     const full = resolveGalleryImages(imgs, slug);
     // `name` can be a string or an object with translations { es, en, ca }.
-    const label = (typeof name === 'object')
+    const label = (name && typeof name === 'object')
         ? (name[state.lang] || name.en || name.es || Object.values(name)[0])
         : (name || "");
-    const altBase = `${titleStr} — ${typeof label === 'string' && label ? label : "imagen"}`;
+    const altBase = `${plain(titleStr)} — ${typeof label === 'string' && label ? plain(label) : "imagen"}`;
     let media;
     if (full.length > 1) {
         media = makeSlider(full, altBase);
@@ -173,16 +174,14 @@ function gallerySection(name, imgs, slug, titleStr) {
     );
 }
 
-// CV: un PDF por idioma en data/PDF/. Cacheamos el resultado del HEAD por
+// CV: un PDF por idioma en data/PDF/. Si el archivo no existe, no sale el enlace. Cacheamos el resultado del HEAD por
 // ruta para no repetir la comprobación cada vez que se re-renderiza la vista.
 const CV_FILES = { es: "cv_es.pdf", en: "cv_en.pdf", ca: "cv_cat.pdf" };
 const cvExistsCache = new Map();
 
 function checkCvExists(path) {
     if (cvExistsCache.has(path)) return cvExistsCache.get(path);
-    const url = new URL(path, window.location.href);
-    url.searchParams.set("v", "20260924");
-    const promise = fetch(url.href, { method: "HEAD" })
+    const promise = fetch(path, { method: "HEAD" })
         .then(r => r.ok)
         .catch(() => false);
     cvExistsCache.set(path, promise);
@@ -327,14 +326,12 @@ export function renderProject(slug) {
         .filter(Boolean);
     const gallerys = (Array.isArray(p.gallerys) ? p.gallerys : [])
         .filter(g => Array.isArray(g) && Array.isArray(g[1]));
-    const trailerNode = vimeoEmbed(p.trailer || p.video);
-    // Videos: embed + caption (Carta N / Letter N)
-    const videosNodes = (Array.isArray(p.videos) ? p.videos : [])
-        .map((v) => {
-            const embed = vimeoEmbed(v);
-            if (!embed) return null;
-            return embed;
-        })
+    const plainTitle = plain(titleStr);
+    const trailerNode = vimeoEmbed(p.trailer || p.video, `${plainTitle} — trailer`);
+    // videos: lista de URLs de Vimeo extra, se muestran antes de las galerías.
+    const videos = Array.isArray(p.videos) ? p.videos : [];
+    const videosNodes = videos
+        .map((url, i) => vimeoEmbed(url, videos.length > 1 ? `${plainTitle} — vídeo ${i + 1}` : plainTitle))
         .filter(Boolean);
     // trailer_pos: "antes" muestra el trailer antes de las galerías; por defecto va después.
     const trailerBefore = ["antes", "pre"].includes((p.trailer_pos || "").toLowerCase());

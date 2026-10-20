@@ -7,7 +7,7 @@
     <title>Bárbara S. Barroso</title>
 
     <!-- SEO -->
-    <meta name="description" content="Bárbara S. Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
+    <meta name="description" content="Bárbara Sánchez Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
     <meta name="keywords" content="Bárbara Sánchez Barroso, barbara s. barroso, barbara wong, artista visual, visual artist, filmmaker, ecofeminismo, ecofeminism, feminismo, feminism, ecología, ecology, cine analógico, analogue film, 16mm, super 8, vídeo instalación, performance, Barcelona, arte contemporáneo">
     <meta name="author" content="Bárbara S. Barroso">
     <!-- Google puede mostrar descripción completa y miniatura grande en los resultados -->
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bárbara S. Barroso">
     <meta property="og:title" content="Bárbara S. Barroso">
-    <meta property="og:description" content="Bárbara S. Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
+    <meta property="og:description" content="Bárbara Sánchez Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
     <meta property="og:url" content="https://barbarawong.info/">
     <!-- Imagen social: la misma de "about". Apaisada a propósito (las verticales se recortan mal en redes y en Google) -->
     <meta property="og:image" content="https://barbarawong.info/data/_about/about.webp">
@@ -36,7 +36,7 @@
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bárbara S. Barroso">
-    <meta name="twitter:description" content="Bárbara S. Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
+    <meta name="twitter:description" content="Bárbara Sánchez Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.">
     <meta name="twitter:image" content="https://barbarawong.info/data/_about/about.webp">
 
     <!-- JSON-LD Person + WebSite -->
@@ -49,7 +49,7 @@
         "name": "Bárbara S. Barroso",
         "alternateName": ["Bárbara Sánchez Barroso", "barbara wong"],
         "jobTitle": ["Visual artist", "Filmmaker", "Researcher"],
-        "description": "Bárbara S. Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.",
+        "description": "Bárbara Sánchez Barroso is a visual artist, filmmaker and researcher. Her work spans film, installation, performance and writing, moving between reality and fiction.",
         "image": "https://barbarawong.info/data/_about/about.webp",
         "url": "https://barbarawong.info/",
         "homeLocation": { "@type": "Place", "name": "Barcelona, Spain" },
@@ -69,11 +69,11 @@
     ]
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260924">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20260924">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Google Analytics 4 (Measurement ID: G-SLB87PWT9Z) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLB87PWT9Z"></script>
@@ -81,7 +81,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-SLB87PWT9Z', { anonymize_ip: true, send_page_view: false });
+      gtag('config', 'G-SLB87PWT9Z', { send_page_view: false });
     </script>
 </head>
 <body data-view="news">
@@ -107,19 +107,20 @@
     <!-- SITE -->
     <main id="app" hidden>
 
-        <aside id="nav" aria-label="Menú principal" data-nosnippet>
+        <!-- data-nosnippet: Google solo lo respeta en div/span/section, no en <aside> -->
+        <aside id="nav" aria-label="Menú principal">
             <!-- TOP (móvil): nombre + categoría activa -->
-            <div id="nav-top">
+            <div id="nav-top" data-nosnippet>
                 <span id="nav-name">bárbara s. barroso</span>
                 <span id="nav-active" aria-hidden="true"></span>
             </div>
 
             <!-- BODY: menú + lang -->
-            <div id="nav-body">
+            <div id="nav-body" data-nosnippet>
                 <nav id="menu-sections" aria-label="Secciones">
                     <ul></ul>
                 </nav>
-                <div id="lang-switch" role="group" aria-label="Idioma" data-nosnippet>
+                <div id="lang-switch" role="group" aria-label="Idioma">
                     <button class="lang-btn is-active" data-lang="es">es</button>
                     <button class="lang-btn" data-lang="en">en</button>
                     <button class="lang-btn" data-lang="ca">cat</button>
@@ -133,7 +134,7 @@
         </aside>
 
         <section id="viewer" aria-label="Contenido">
-            <h1><a id="site-name" href="#news" aria-label="Inicio">bárbara s. barroso</a></h1>
+            <h1><a id="site-name" href="#news" aria-label="Inicio"><span data-nosnippet>bárbara s. barroso</span></a></h1>
             <div id="viewer-content"></div>
         </section>
     </main>
@@ -141,17 +142,16 @@
     <!-- Respaldo sin JS: también es lo que ven los buscadores que no ejecutan JavaScript -->
     <noscript>
         <div style="padding:2rem;max-width:44rem;margin:0 auto;line-height:1.5">
-            <p><strong>Bárbara S. Barroso</strong></p>
-            <p>Bárbara S. Barroso is a visual artist, filmmaker and researcher. Her work spans film,
+            <p>Bárbara Sánchez Barroso is a visual artist, filmmaker and researcher. Her work spans film,
                installation, performance and writing, moving between reality and fiction.</p>
             <p>Bárbara trabaja con cine analógico y video instalación, así como con la performance y la
                escritura. Su práctica se sitúa en la intersección entre cine, instalación y pensamiento
                ecológico. Vive y trabaja en Barcelona.</p>
             <img src="data/_about/about.webp" alt="Obra de Bárbara S. Barroso" width="1400" height="933" style="max-width:100%;height:auto">
-            <p>Activa JavaScript para ver la web completa (obra, noticias, publicaciones y diario).</p>
+            <div data-nosnippet><p>Activa JavaScript para ver la web completa (obra, noticias, publicaciones y diario).</p></div>
         </div>
     </noscript>
 
-    <script type="module" src="js/main.js?v=20260924"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
