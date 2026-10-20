@@ -2,6 +2,24 @@
   {
     "year": "2026",
     "title": {
+      "es": "Els peregrins en l’Òrbita Film Fest y el Som Cinema 2026",
+      "en": "Els peregrins at Òrbita Film Fest and Som Cinema 2026",
+      "ca": "Els peregrins a l’Òrbita Film Fest i al Som Cinema 2026"
+    },
+    "description": {
+      "es": "*Els peregrins* continúa su recorrido por festivales. El jueves 22 de octubre a las 20 h se podrá ver en Barcelona, dentro de la sección oficial del Òrbita Film Fest, en los Cinemes Texas.\n\nEse mismo jueves, a las 18 h, también se proyectará en el Som Cinema – Festival de l’Audiovisual Català, dentro de la sección oficial de cortometrajes documentales, en Screenbox Lleida.",
+      "en": "*Els peregrins* continues its festival journey! On Thursday, October 22 at 8 pm, it will screen in Barcelona as part of the official selection of Òrbita Film Fest, at Cinemes Texas.\n\nThe same Thursday, at 6 pm, it will also screen at Som Cinema – Festival de l’Audiovisual Català, as part of the official documentary short film selection, at Screenbox Lleida.",
+      "ca": "*Els peregrins* continua el seu recorregut per festivals! El dijous 22 d’octubre a les 20 h es podrà veure a Barcelona, dins la secció oficial de l’Òrbita Film Fest, als Cinemes Texas.\n\nEl mateix dijous, a les 18 h, també es projectarà al Som Cinema – Festival de l’Audiovisual Català, dins la secció oficial de curtmetratges documentals, a l’Screenbox Lleida."
+    },
+    "image": "data/_news/080.webp",
+    "links": [
+      "https://www.orbitafilmfest.com/about-1",
+      "https://www.somcinema.cat/som-cinema-17-2026/curtmetratges-documentals-17/els-peregrins/"
+    ]
+  },
+  {
+    "year": "2026",
+    "title": {
       "es": "Coexistir en los márgenes. Prácticas artísticas sobre ecología en el territorio",
       "en": "Coexisting on the margins. Artistic practices on ecology in the territory",
       "ca": "Coexistir als marges. Pràctiques artístiques sobre ecologia al territori"
