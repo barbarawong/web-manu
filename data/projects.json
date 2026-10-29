@@ -36,9 +36,42 @@
     ],
     "trailer": "https://vimeo.com/1173077278",
     "creditos": {
-      "es": [],
-      "en": [],
-      "ca": []
+      "es": [
+        "Con: Ondrej Vlach Sulek",
+        "Producción: Eva Murgui (Vayolet Films), Maria Gibert Espinós y Gloria Vilches (CCCB)",
+        "Montaje: Maria Besora (AMMAC)",
+        "Dirección de fotografía y color: Ben Guez",
+        "Sonido directo y diseño de sonido: Andrea Ballesteros",
+        "Ayudante de producción: Bru G. Embún",
+        "Créditos y gráfica: Helga Juárez",
+        "Laboratorio: Cinelab Bucarest",
+        "Distribuidora: Agencia Freak",
+        "Gracias a Alba Bresoli, Jesús, Valentina Alvarado Matos, Carlos Vasquez Mendez y Maria Roy"
+      ],
+      "en": [
+        "With: Ondrej Vlach Sulek",
+        "Production: Eva Murgui (Vayolet Films), Maria Gibert Espinós and Gloria Vilches (CCCB)",
+        "Editing: Maria Besora (AMMAC)",
+        "Cinematography and color: Ben Guez",
+        "Location sound and sound design: Andrea Ballesteros",
+        "Production assistant: Bru G. Embún",
+        "Credits and graphics: Helga Juárez",
+        "Lab: Cinelab Bucarest",
+        "Distributor: Agencia Freak",
+        "Thanks to Alba Bresoli, Jesús, Valentina Alvarado Matos, Carlos Vasquez Mendez and Maria Roy"
+      ],
+      "ca": [
+        "Amb: Ondrej Vlach Sulek",
+        "Producció: Eva Murgui (Vayolet Films), Maria Gibert Espinós i Gloria Vilches (CCCB)",
+        "Muntatge: Maria Besora (AMMAC)",
+        "Direcció de fotografia i color: Ben Guez",
+        "So directe i disseny de so: Andrea Ballesteros",
+        "Ajudant de producció: Bru G. Embún",
+        "Crèdits i gràfica: Helga Juárez",
+        "Laboratori: Cinelab Bucarest",
+        "Distribuïdora: Agencia Freak",
+        "Gràcies a Alba Bresoli, Jesús, Valentina Alvarado Matos, Carlos Vasquez Mendez i Maria Roy"
+      ]
     },
     "gallerys": [
       [
